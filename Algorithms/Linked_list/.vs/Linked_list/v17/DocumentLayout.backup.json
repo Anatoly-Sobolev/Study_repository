@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\Algorithms\\Linked_list\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AB02508-2C1E-4450-90FE-B9E2CB8201C6}|Linked_list\\Linked_list.vcxproj|C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\Algorithms\\Linked_list\\Linked_list\\Linked_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5AB02508-2C1E-4450-90FE-B9E2CB8201C6}|Linked_list\\Linked_list.vcxproj|solutionrelative:Linked_list\\Linked_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Linked_list.cpp",
+              "DocumentMoniker": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\Algorithms\\Linked_list\\Linked_list\\Linked_list.cpp",
+              "RelativeDocumentMoniker": "Linked_list\\Linked_list.cpp",
+              "ToolTip": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\Algorithms\\Linked_list\\Linked_list\\Linked_list.cpp",
+              "RelativeToolTip": "Linked_list\\Linked_list.cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-30T05:39:27.17Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
