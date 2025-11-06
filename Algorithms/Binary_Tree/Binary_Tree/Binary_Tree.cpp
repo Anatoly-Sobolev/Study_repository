@@ -7,6 +7,9 @@ struct Node {
     Node* right;
 };
 
+//Получает число узлов, и строит бинарное дерево с нужным числом узлов.
+// Возвращает родительский узел
+//level - это значение поля value = уровню узла (0, 1, 2...)
 Node* buildPerfectlyBalancedTree(int num_nodes, int level) {
     if (num_nodes == 0) {
         return nullptr;
@@ -30,7 +33,7 @@ Node* buildPerfectlyBalancedTree(int num_nodes, int level) {
     return newNode;
 }
 
-
+// Меняет местами все правые и левые узлы
 void swapChildren(Node* node) {
     if (node == nullptr) {
         return;
@@ -48,15 +51,16 @@ void swapChildren(Node* node) {
     swapChildren(node->right);
 }
 
-
+//Выводит на экран бинарное дерево
 void printTree(Node* node, int depth) {
     if (node == nullptr) {
+        
         return;
     }
 
 
     for (int i = 0; i < depth; ++i) {
-        cout << "     _";
+        cout << " ____";
     }
     cout << node->value << endl;
 
@@ -65,7 +69,7 @@ void printTree(Node* node, int depth) {
     printTree(node->right, depth + 1);
 }
 
-
+// Удаляет дерево
 void freeTree(Node* node) {
     if (node == nullptr) {
         return;
@@ -89,7 +93,7 @@ int main() {
     }
 
 
-    Node* root = buildPerfectlyBalancedTree(N, 10);
+    Node* root = buildPerfectlyBalancedTree(N, 0);
 
     cout << "\nДерево до обмена дочерних вершин:" << endl;
     printTree(root, 0);
