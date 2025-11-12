@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\4_lab_game\\C\u002B\u002B\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\3_lab_game\\C\u002B\u002B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0AAA55BB-A77B-4D22-8958-B8CE84214ECE}|4_lab_game\\4_lab_game.vcxproj|C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\3_lab_game\\C\u002B\u002B\\4_lab_game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0AAA55BB-A77B-4D22-8958-B8CE84214ECE}|4_lab_game\\4_lab_game.vcxproj|solutionrelative:4_lab_game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\3_lab_game\\C\u002B\u002B\\4_lab_game\\main.cpp",
+              "RelativeDocumentMoniker": "4_lab_game\\main.cpp",
+              "ToolTip": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\3_lab_game\\C\u002B\u002B\\4_lab_game\\main.cpp",
+              "RelativeToolTip": "4_lab_game\\main.cpp",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-11T05:47:13.785Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

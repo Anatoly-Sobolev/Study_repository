@@ -11,6 +11,8 @@ class Ball:
         # Размеры экрана для расчета столкновений со стенами и набора очков
         self.screen_width = screen_width
         self.screen_height = screen_height
+        self.last_tuch = None
+
 
     def move(self):
         """
@@ -31,8 +33,19 @@ class Ball:
         """
         # Проверяем столкновение с ракеткой первого игрока (слева)
         # Проверяем столкновение с ракеткой второго игрока (справа)
+        if self.rect.colliderect(player1_paddle.rect): self.last_tuch = 'left'
+        if self.rect.colliderect(player2_paddle.rect): self.last_tuch = 'right'
+
         if self.rect.colliderect(player1_paddle.rect) or self.rect.colliderect(player2_paddle.rect):
             self.speed_x *= -1
+            return True
+        else: return False
+
+    def check_collision_mine(self, lst_of_mines):
+        for mine in lst_of_mines:
+            if self.rect.colliderect(mine.rect): return True
+
+
 
     def check_point(self):
         """
@@ -42,9 +55,9 @@ class Ball:
         если очко набрано, иначе None.
         """
         if self.rect.left <= 0:
-            return 'player' # Шар вышел за левую границу, значит очко набрал правый игрок
+            return 'player_2' # Шар вышел за левую границу, значит очко набрал правый игрок
         if self.rect.right >= self.screen_width:
-            return 'cpu' # Шар вышел за правую границу, значит очко набрал левый игрок
+            return 'player_1' # Шар вышел за правую границу, значит очко набрал левый игрок
         return None
 
     def reset(self):

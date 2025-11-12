@@ -17,7 +17,7 @@ class Screen:
         self.screen_width = width
         self.screen_height = height
 
-    def draw_elements(self, ball_obj, player1_paddle, player2_paddle, player1_points, player2_points):
+    def draw_elements(self, ball_obj, player1_paddle, player2_paddle, player1_points, player2_points, lst_of_mines):
         """
         Отрисовывает все игровые элементы на экране.
         :param ball_obj: Объект Ball для отрисовки.
@@ -43,6 +43,9 @@ class Screen:
         ball_obj.draw(self.screen)
         player1_paddle.draw(self.screen)
         player2_paddle.draw(self.screen)
+        [mine.draw(self.screen) for mine in lst_of_mines]
+
+
 
         # Обновляем весь экран для отображения изменений
         pygame.display.update()
