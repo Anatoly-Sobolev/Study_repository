@@ -1,57 +1,77 @@
 import pygame
 import random
+from Mine import Mine
+from Game_consts import *
 
 class Ball:
-    def __init__(self, x, y, size, initial_speed_x, initial_speed_y, screen_width, screen_height):
-        self.rect = pygame.Rect(x, y, size, size)
-        self.speed_x = initial_speed_x
-        self.speed_y = initial_speed_y
-        self.screen_width = screen_width
-        self.screen_height = screen_height
+    def __init__(self, width , hight, color, screen_w, screen_h):
+        self.rect = pygame.Rect(screen_w/2, screen_h/2, width, hight)
+        self.width = width
+        self.hight = hight
+        self.color = color
         self.last_tuch = None
+        self.speed_x = random.choice([-1, 1]) * speed_x
+        self.speed_y = random.choice([-1, 1]) * speed_y
+        self.screen_w = screen_w
+        self.screen_h = screen_h
+        self.lst_of_mines = []
 
+    def start_position(self):
+        self.rect.x = 640
+        self.rect.y = 360
+        self.speed_x = random.choice([-1, 1]) * speed_x
+        self.speed_y = random.choice([-1, 1]) * speed_y
 
     def move(self):
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
 
-        if self.rect.top <= 0 or self.rect.bottom >= self.screen_height:
+
+    def check_colisions(self, red_player, blue_player, ball):
+        if self.rect.x + self.width> self.screen_w:
+            red_player.score += 1
+            self.start_position()
+            self.lst_of_mines = []
+
+
+        if self.rect.x < 0:
+            blue_player.score += 1
+            self.start_position()
+            self.lst_of_mines = []
+
+        if self.rect.y < 0:
+            self.speed_y *= -1
+        if self.rect.y + self.hight > self.screen_h:
             self.speed_y *= -1
 
-    def check_collision(self, player1_paddle, player2_paddle):
-        if self.rect.colliderect(player1_paddle.rect): self.last_tuch = 'left'
-        if self.rect.colliderect(player2_paddle.rect): self.last_tuch = 'right'
-
-        if self.rect.colliderect(player1_paddle.rect) or self.rect.colliderect(player2_paddle.rect):
+        if self.rect.colliderect(red_player.rect):
             self.speed_x *= -1
-            return True
-        else: return False
+            self.last_tuch = red_player.color
+            new_mine = Mine(self.last_tuch)
+            self.lst_of_mines.append(new_mine)
 
-    def check_collision_mine(self, lst_of_mines):
-        for mine in lst_of_mines:
-            if self.rect.colliderect(mine.rect): return mine
-
-    def check_color_and_paddle(self, mine):
-        if self.last_tuch == 'left' and mine.color == 'blue':
-            return True
-        if self.last_tuch == 'right' and mine.color == 'red':
-            return True
-        return False
+        if self.rect.colliderect(blue_player.rect):
+            self.speed_x *= -1
+            self.last_tuch = blue_player.color
+            new_mine = Mine(self.last_tuch)
+            self.lst_of_mines.append(new_mine)
 
 
+    def check_colis_mine(self, red_player, blue_player):
+        for mine in self.lst_of_mines:
+            if self.rect.colliderect(mine) and mine.color != self.last_tuch:
+                if self.last_tuch == 'red':
+                    blue_player.score += 1
 
-    def check_point(self):
+                else:
+                    red_player.score += 1
 
-        if self.rect.left <= 0:
-            return 'player_2' # Шар вышел за левую границу, значит очко набрал правый игрок
-        if self.rect.right >= self.screen_width:
-            return 'player_1' # Шар вышел за правую границу, значит очко набрал левый игрок
-        return None
+                self.lst_of_mines = []
 
-    def reset(self):
-        self.rect.center = (self.screen_width / 2, self.screen_height / 2)
-        self.speed_x *= random.choice([-1, 1])
-        self.speed_y *= random.choice([-1, 1])
+
+
+
 
     def draw(self, surface):
-        pygame.draw.ellipse(surface, 'white', self.rect)
+        pygame.draw.ellipse(surface, self.color, self.rect)
+

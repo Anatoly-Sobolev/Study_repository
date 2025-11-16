@@ -1,0 +1,11 @@
+screen_w = 1280
+screen_h = 720
+caption = "PONG GAME!"
+paddle_h = 150
+paddle_w = 15
+blue_paddle_date = (0, screen_h/2 - paddle_h/2, paddle_w, paddle_h)
+red_paddle_date = (screen_w - paddle_w, screen_h/2 - paddle_h/2, paddle_w, paddle_h)
+ball_size = (40, 40)
+mine_len = 40
+speed_x = 10
+speed_y = 8
