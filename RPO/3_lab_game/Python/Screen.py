@@ -12,7 +12,7 @@ class Screen:
 
     def update(self, ball, blue_player, red_player):
 
-        pygame.draw.aaline(self.screen, 'white', (self.wigth / 2, 0), (self.wigth / 2, self.hight))
+        pygame.draw.aaline(self.screen, 'black', (self.wigth / 2, 0), (self.wigth / 2, self.hight))
 
         blue_player.move_player()
         blue_player.draw(self.screen)
@@ -20,8 +20,8 @@ class Screen:
         red_player.move_player()
         red_player.draw(self.screen)
 
-        player1_score_surface = self.font.render(str(red_player.score), True, "white")
-        player2_score_surface = self.font.render(str(blue_player.score), True, "white")
+        player1_score_surface = self.font.render(str(red_player.score), True, text_color)
+        player2_score_surface = self.font.render(str(blue_player.score), True, text_color)
 
 
         for mine in ball.lst_of_mines:

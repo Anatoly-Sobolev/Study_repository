@@ -6,6 +6,7 @@ from Ball import Ball
 from Player import Player
 from Game_consts import *
 from Mine import Mine
+from Game_over_condition import game_over
 
 pygame.init()
 game_display = Screen(screen_w, screen_h, caption)
@@ -15,7 +16,8 @@ red_player = Player(*red_paddle_date, screen_h, color_player_2, pygame.K_UP, pyg
 clock = pygame.time.Clock()
 
 while True:
-    game_display.screen.fill('black')
+
+    game_display.screen.fill(backgroung)
     for enent in pygame.event.get():
         if enent.type == pygame.QUIT:
             pygame.quit()
@@ -27,3 +29,5 @@ while True:
     game_display.update(ball, blue_player, red_player)
     pygame.display.update()
     clock.tick(60)
+
+    game_over(red_player, blue_player, game_display)
