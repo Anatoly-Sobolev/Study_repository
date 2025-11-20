@@ -2,6 +2,7 @@ import pygame
 from Consts import *
 import sys
 
+
 class Screen:
     def __init__(self):
         self.screen = pygame.display.set_mode((screen_w, screen_h))
@@ -39,14 +40,19 @@ class Screen:
 
     def game_over(self, red_player, blue_player):
         if red_player.score == game_over_score or blue_player.score == game_over_score:
-            text_game_over = f'{['RED', 'BLUE'][red_player.score == game_over_score]} PLAYER WON'
+            pygame.mixer.stop()
+
+            text_game_over = f'{['RED', 'BLUE'][red_player.score == game_over_score]} PLAYER WIN'
             font = pygame.font.Font(None, 150)
             text_surface = font.render(text_game_over, True, ['RED', 'BLUE'][red_player.score == game_over_score])
             text_rect = text_surface.get_rect()
             text_rect.center = (screen_w // 2, screen_h // 2)
             self.screen.blit(text_surface, text_rect)
 
+
             pygame.display.update()
+            game_over_sound.play()
+            game_over_aplod.play()
             pygame.time.wait(5000)
             pygame.quit()
             sys.exit()

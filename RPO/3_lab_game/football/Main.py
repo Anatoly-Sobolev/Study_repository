@@ -7,6 +7,7 @@ from Player import Player
 from Consts import *
 
 pygame.init()
+pygame.mixer.init()
 
 
 game_display = Screen()
@@ -14,8 +15,8 @@ ball = Ball()
 red_player = Player(red_player_data, 'red', pygame.K_UP, pygame.K_DOWN)
 blue_player = Player(blue_player_data, 'blue', pygame.K_w, pygame.K_s)
 clock = pygame.time.Clock()
-
-
+back_music.play(loops=-1)
+back_sounds.play(loops=-1)
 
 while True:
     game_display.screen.blit(game_display.image, (0, 0))

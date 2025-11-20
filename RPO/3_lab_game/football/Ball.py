@@ -32,24 +32,43 @@ class Ball:
             blue_player.score += 1
             self.start_position()
             self.lst_of_teammate = []
+            goal_sound.play()
+            pygame.time.wait(1000)
+
 
         if self.rect.left<= 0:
             red_player.score += 1
             self.start_position()
             self.lst_of_teammate = []
+            goal_sound.play()
+            pygame.time.wait(1000)
+
 
 
         if self.rect.colliderect(blue_player.rect):
+            kick_sound.play()
             self.speed_x *= -1
             self.last_tuch = blue_player.color
             new_teammate = Teammate('blue', blue_player_image)
             self.lst_of_teammate.append(new_teammate)
 
         if self.rect.colliderect(red_player.rect):
+            kick_sound.play()
             self.speed_x *= -1
             self.last_tuch = red_player.color
             new_teammate = Teammate('red', red_player_image)
             self.lst_of_teammate.append(new_teammate)
+
+        if 0 < self.speed_x < 6 or self.speed_x > 20: self.speed_x = 10
+        if -6 < self.speed_x < 0 or self.speed_x < -20: self.speed_x = -10
+        if 0 < self.speed_y < 2 or self.speed_y > 20: self.speed_y = 8
+        if -2 < self.speed_y < 0 or self.speed_y < -20: self.speed_y = -8
+
+
+        if self.speed_x == 0 or self.speed_y == 0:
+            goal_sound.play()
+            pygame.time.wait(1000)
+            self.start_position()
 
     def start_position(self):
         self.rect.center = (screen_w//2, screen_h//2)
@@ -60,11 +79,14 @@ class Ball:
     def check_push_players(self):
         for player in self.lst_of_teammate:
             if self.rect.colliderect(player.rect) and player.color != self.last_tuch:
-                self.speed_x += random.choice([-2, 2, 0])
-                self.speed_y *= random.choice([-2, 2, 0])
+                kick_sound.play()
+                self.speed_x += random.choice([-2, 2])
+                self.speed_y *= random.choice([-2, 2])
                 self.speed_x *= -1
+                self.speed_y *= random.choice([-1, 1])
                 self.last_tuch = player.color
                 self.lst_of_teammate.remove(player)
+
 
 
 
