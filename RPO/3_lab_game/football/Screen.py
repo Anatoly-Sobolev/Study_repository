@@ -9,6 +9,8 @@ class Screen:
         self.image = pygame.transform.scale(background, (screen_w, screen_h))
         pygame.display.set_caption(caption)
         self.font = pygame.font.Font(None, 150)
+        self.goal_left = pygame.transform.scale(goal_left, (paddle_w - 10, screen_h))
+        self.goal_right = pygame.transform.scale(goal_right, (paddle_w - 10, screen_h))
 
     def draw_players(self, ball):
         for player in ball.lst_of_teammate:
@@ -30,6 +32,7 @@ class Screen:
 
         self.draw_players(ball)
         self.show_score(blue_player, red_player)
+        self.draw_goals()
 
     def show_score(self, blue_player, red_player):
         player1_score_surface = self.font.render(str(blue_player.score), True, 'black')
@@ -56,3 +59,8 @@ class Screen:
             pygame.time.wait(5000)
             pygame.quit()
             sys.exit()
+
+
+    def draw_goals(self):
+        self.screen.blit(self.goal_left, (0, 0))
+        self.screen.blit(self.goal_right, (screen_w-paddle_w, 0))
