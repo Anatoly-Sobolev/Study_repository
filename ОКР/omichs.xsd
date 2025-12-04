@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XSD схема omichs.xsd -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Корневой элемент -->
+  <xsd:element name="omichs">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="collection">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="region" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="group" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="person" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="name" type="xsd:string"/>
+                                <xsd:element name="lifespan">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="born" type="xsd:string"/>
+                                      <xsd:element name="died" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="bio" type="xsd:string"/>
+                                <xsd:element name="work" type="xsd:string"/>
+                                <xsd:element name="picture" type="xsd:string"/>
+                              </xsd:sequence>
+                              <xsd:attribute name="id" type="xsd:ID" use="required"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="name" type="xsd:string" use="required"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="type" type="xsd:string" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="xsd:string" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

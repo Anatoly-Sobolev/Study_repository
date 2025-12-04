@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD для omichs.xml -->
+<!ELEMENT omichs (collection)>
+<!ELEMENT collection (region+)>
+<!ATTLIST collection version CDATA #REQUIRED>
+<!ELEMENT region (group+)>
+<!ATTLIST region type CDATA #REQUIRED>
+<!ELEMENT group (person+)>
+<!ATTLIST group name CDATA #REQUIRED>
+<!ELEMENT person (name, lifespan, bio, work, picture)>
+<!ATTLIST person id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT lifespan (born, died?)>
+<!ELEMENT born (#PCDATA)>
+<!ELEMENT died (#PCDATA)>
+<!ELEMENT bio (#PCDATA)>
+<!ELEMENT work (#PCDATA)>
+<!ELEMENT picture (#PCDATA)>

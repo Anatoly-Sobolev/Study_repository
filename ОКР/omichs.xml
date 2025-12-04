@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Подключение схемы XSD через xsi:schemaLocation -->
+<!DOCTYPE omichs SYSTEM "omichs.dtd">
+
+<?xml-stylesheet type="text/xsl" href="omichs-to-html.xsl"?>
+
+<omichs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="omichs.xsd">
+  <!-- Корневой элемент: коллекция известных омичей -->
+  <!-- Атрибут корневого уровня: версия набора данных -->
+  <collection version="1.0">
+    
+    <!-- Область: музыка и искусство -->
+    <region type="Музыка и искусство">
+      <group name="Рок-музыканты">
+        <person id="p1">
+          <name>Егор Летов</name>
+          <lifespan><born>1964</born><died>2008</died></lifespan>
+          <bio>Легендарный рок-музыкант, поэт, лидер группы "Гражданская Оборона". Родился, вырос и жил в Омске.</bio>
+          <work>"Русское поле экспериментов", "Так закалялась сталь", "Поезд ушёл"</work>
+          <picture>фото/Егор_Летов.jpeg</picture>
+        </person>
+        <person id="p2">
+          <name>Сергей Летов</name>
+          <lifespan><born>1956</born></lifespan>
+          <bio>Джазовый музыкант, саксофонист. Родился в Омске, брат Егора Летова.</bio>
+          <work>Участие в проектах "Три О", "Великие Луны"</work>
+          <picture>фото/Сергей_Летов.jpeg</picture>
+        </person>
+      </group>
+      
+      <group name="Кино и театр">
+        <person id="p3">
+          <name>Михаил Ульянов</name>
+          <lifespan><born>1927</born><died>2007</died></lifespan>
+          <bio>Выдающийся актёр театра и кино, народный артист СССР. Родился в селе Бергамак Омской области.</bio>
+          <work>"Председатель", "Братья Карамазовы", "Ворошиловский стрелок"</work>
+          <picture>фото/Ульянов.jpeg</picture>
+        </person>
+      </group>
+    </region>
+
+    <!-- Область: наука и образование -->
+    <region type="Наука и образование">
+      <group name="Ученые">
+        <person id="p4">
+          <name>Валентина Бисярина</name>
+          <lifespan><born>1912</born><died>1997</died></lifespan>
+          <bio>Выдающийся педиатр, академик АМН СССР. Жила и работала в Омске, основатель омской педиатрической школы.</bio>
+          <work>Фундаментальные работы по детским болезням</work>
+          <picture>фото/Бисярина.jpeg</picture>
+        </person>
+        <person id="p5">
+          <name>Александр Голованов</name>
+          <lifespan><born>1904</born><died>1975</died></lifespan>
+          <bio>Главный маршал авиации, Герой Советского Союза. Родился и вырос в Омске.</bio>
+          <work>Командование авиацией дальнего действия в годы Великой Отечественной войны</work>
+          <picture>фото/Александр_Голованов.jpeg</picture>
+        </person>
+      </group>
+    </region>
+
+    <!-- Область: спорт -->
+    <region type="Спорт">
+      <group name="Хоккей">
+        <person id="p6">
+          <name>Сергей Стариков</name>
+          <lifespan><born>1958</born></lifespan>
+          <bio>Советский хоккеист, двукратный олимпийский чемпион. Родился и начал карьеру в Омске.</bio>
+          <work>2 олимпийских золота, 7 чемпионских титулов мира</work>
+          <picture>фото/Сергей_Стариков.jpeg</picture>
+        </person>
+        <person id="p7">
+          <name>Александр Первухин</name>
+          <lifespan><born>1956</born></lifespan>
+          <bio>Советский хоккеист, олимпийский чемпион. Родился и начинал карьеру в Омске.</bio>
+          <work>Олимпийское золото 1984, 5 чемпионств мира</work>
+          <picture>фото/Александр_Первухин.jpeg</picture>
+        </person>
+        <person id="p8">
+          <name>Александр Гуськов</name>
+          <lifespan><born>1947</born></lifespan>
+          <bio>Советский хоккеист, олимпийский чемпион. Родился и начал играть в хоккей в Омске.</bio>
+          <work>Олимпийское золото 1972 года</work>
+          <picture>фото/Александр_Гуськов.jpeg</picture>
+        </person>
+      </group>
+      
+      <group name="Другие виды спорта">
+        <person id="p9">
+          <name>Ирина Минх</name>
+          <lifespan><born>1964</born></lifespan>
+          <bio>Советская и российская биатлонистка, олимпийская чемпионка. Родилась и тренировалась в Омске.</bio>
+          <work>Олимпийское золото Лиллехаммера-1994, 5-кратная чемпионка мира</work>
+          <picture>фото/Ирина_Минх.jpeg</picture>
+        </person>
+        <person id="p10">
+          <name>Сергей Шелпаков</name>
+          <lifespan><born>1965</born></lifespan>
+          <bio>Биатлонист, чемпион мира. Родился и вырос в Омске.</bio>
+          <work>Чемпион мира 1991 года в эстафете</work>
+          <picture>фото/Сергей_Шелпаков.jpeg</picture>
+        </person>
+      </group>
+    </region>
+
+    <!-- Область: литература -->
+    <region type="Литература">
+      <group name="Писатели и поэты">
+        <person id="p11">
+          <name>Роберт Рождественский</name>
+          <lifespan><born>1932</born><died>1994</died></lifespan>
+          <bio>Выдающийся советский поэт, переводчик. Детство и юность провёл в Омске, учился в омской школе.</bio>
+          <work>"Реквием", "Это время", "Голос города"</work>
+          <picture>фото/Роберт_Рождественский.jpeg</picture>
+        </person>
+        <person id="p12">
+          <name>Аркадий Кутилов</name>
+          <lifespan><born>1940</born><died>1985</died></lifespan>
+          <bio>Поэт, художник. Родился в Омской области, жил и работал в Омске.</bio>
+          <work>Поэтические сборники, графические работы</work>
+          <picture>фото/Аркадий_Кутилов.jpeg</picture>
+        </person>
+        <person id="p13">
+          <name>Тимофей Белозёров</name>
+          <lifespan><born>1929</born><died>1986</died></lifespan>
+          <bio>Советский поэт, автор произведений для детей. Жил и работал в Омске.</bio>
+          <work>"Карасик", "Лесной плакунчик", "Подснежники"</work>
+          <picture>фото/Тимофей_Белозёров.jpeg</picture>
+        </person>
+      </group>
+    </region>
+
+    <!-- Область: космос -->
+    <region type="Космос">
+      <group name="Космонавты">
+        <person id="p14">
+          <name>Юрий Исаулов</name>
+          <lifespan><born>1944</born></lifespan>
+          <bio>Лётчик-космонавт, Герой Советского Союза. Родился в Омске.</bio>
+          <work>Космический полёт 1982 года, работа на станции "Салют-7"</work>
+          <picture>фото/Юрий_Исаулов.jpeg</picture>
+        </person>
+        <person id="p15">
+          <name>Борис Андреев</name>
+          <lifespan><born>1940</born></lifespan>
+          <bio>Космонавт-испытатель. Родился и вырос в Омске.</bio>
+          <work>Подготовка к космическим полётам, работа в отряде космонавтов</work>
+          <picture>фото/Борис_Андреев.jpeg</picture>
+        </person>
+      </group>
+    </region>
+    
+    <!-- Область: военные и герои -->
+    <region type="Военные и герои">
+      <group name="Герои Советского Союза">
+        <person id="p16">
+          <name>Дмитрий Карбышев</name>
+          <lifespan><born>1880</born><died>1945</died></lifespan>
+          <bio>Генерал-лейтенант инженерных войск, Герой Советского Союза. Родился в Омске.</bio>
+          <work>Подвиг в фашистском концлагере Маутхаузен</work>
+          <picture>фото/Дмитрий_Карбышев.jpeg</picture>
+        </person>
+        <person id="p17">
+          <name>Иннокентий Герасимов</name>
+          <lifespan><born>1915</born><died>1990</died></lifespan>
+          <bio>Лётчик, Герой Советского Союза. Родился и вырос в Омске.</bio>
+          <work>Подвиги в годы Великой Отечественной войны</work>
+          <picture>фото/Иннокентий_Герасимов.jpeg</picture>
+        </person>
+      </group>
+    </region>
+
+  </collection>
+</omichs>
