@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\\u0428\u0438\u0444\u0440\\C\u002B\u002B\\coding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80F5A8C2-1FF5-43BE-8B7B-CC3336BB18BD}|coding\\coding.vcxproj|C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\\u0428\u0438\u0444\u0440\\C\u002B\u002B\\coding\\coding\\coding.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80F5A8C2-1FF5-43BE-8B7B-CC3336BB18BD}|coding\\coding.vcxproj|solutionrelative:coding\\coding.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "coding.cpp",
+              "DocumentMoniker": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\\u0428\u0438\u0444\u0440\\C\u002B\u002B\\coding\\coding\\coding.cpp",
+              "RelativeDocumentMoniker": "coding\\coding.cpp",
+              "ToolTip": "C:\\Users\\UZER\\Desktop\\\u0423\u043D\u0438\u0432\u0435\u0440\\Study_Repository\\RPO\\\u0428\u0438\u0444\u0440\\C\u002B\u002B\\coding\\coding\\coding.cpp",
+              "RelativeToolTip": "coding\\coding.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-06T03:24:41.114Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
